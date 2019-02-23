@@ -15,6 +15,9 @@ Style/BracesAroundHashParameters:
 Style/ClassVars:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 # We need these names for backwards compatability
 Style/PredicateName:
   Enabled: false
@@ -206,6 +209,9 @@ Lint/HandleExceptions:
 Metrics/AbcSize:
   Enabled: false
 
+Metrics/BlockLength:
+  Enabled: false
+
 Metrics/BlockNesting:
   Enabled: false
 
@@ -228,4 +234,7 @@ Metrics/ParameterLists:
   Enabled: false
 
 Metrics/PerceivedComplexity:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
   Enabled: false

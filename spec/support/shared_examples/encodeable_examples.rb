@@ -8,7 +8,7 @@ RSpec.shared_examples 'Encodeable Examples' do
           and_call_original
 
       token = subject.encode(payload: payload)
-      expect(token).to be_kind_of (String)
+      expect(token).to be_kind_of String
     end
 
     context 'when expiration is passed in' do
@@ -18,7 +18,7 @@ RSpec.shared_examples 'Encodeable Examples' do
             and_call_original
 
         token = subject.encode(payload: payload, expires_in: 60)
-        expect(token).to be_kind_of (String)
+        expect(token).to be_kind_of String
       end
     end
   end

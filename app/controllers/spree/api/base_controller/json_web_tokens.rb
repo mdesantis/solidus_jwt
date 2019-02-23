@@ -1,6 +1,7 @@
 module Spree::Api::BaseController::JsonWebTokens
   def load_user
     return super unless json_web_token.present?
+
     @current_api_user ||= Spree.user_class.find_by(id: json_web_token['id'])
   end
 
@@ -10,6 +11,7 @@ module Spree::Api::BaseController::JsonWebTokens
     # Allow spree to try and authenticate if we still allow it. Otherwise
     # raise an error
     return if SolidusJwt::Config.allow_spree_api_key
+
     raise
   end
 

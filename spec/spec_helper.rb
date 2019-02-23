@@ -14,7 +14,7 @@ end
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 
-require File.expand_path('../dummy/config/environment.rb', __FILE__)
+require File.expand_path('dummy/config/environment.rb', __dir__)
 
 require 'byebug'
 require 'rspec/rails'
@@ -71,6 +71,8 @@ RSpec.configure do |config|
   config.before :suite do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with :truncation
+
+    FactoryBot.find_definitions
   end
 
   # Before each spec check if it is a Javascript test and switch between using database transactions or not where necessary.
